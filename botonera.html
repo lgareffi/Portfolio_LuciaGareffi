@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Proyecto Botonera</title>
+  <link rel="stylesheet" href="stylesProyectos.css">
+  
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html#sobremi">Sobre Mí</a></li>
+      <li><a href="index.html#proyectos">Proyectos</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+      <li><a href="/Linktree/index.html">Linktree</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="titulo">Proyecto Botonera</h1>
+
+  <section class="contenedorBotonera">
+    <p class="descripcion">
+        Botonera con canciones icónicas de películas que reconocemos al instante 🎬🎶
+    </p>
+
+    <div class="botonera">
+        <button id="boton1" class="boton-sonido"><img src="imagenes/harrypotter.webp" alt="harryPotter" /></button>
+        <button id="boton2" class="boton-sonido"><img src="imagenes/indiana.jpg" alt="indianaJones" /></button>
+        <button id="boton3" class="boton-sonido"><img src="imagenes/panteraRosa.jpg" alt="panteraRosa" /></button>
+        <button id="boton4" class="boton-sonido"><img src="imagenes/piratasCaribe.webp" alt="piratasDelCaribe" /></button>
+        <button id="boton5" class="boton-sonido"><img src="imagenes/rocky.jpg" alt="rocky" /></button>
+        <button id="boton6" class="boton-sonido"><img src="imagenes/starwars.jpg" alt="starwars" /></button>
+    </div>
+
+  </section>
+
+  <script src="./js/botonera.js"></script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

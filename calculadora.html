@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="stylesProyectos.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#sobremi">Sobre Mí</a></li>
+            <li><a href="index.html#proyectos">Proyectos</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+            <li><a href="/Linktree/index.html">Linktree</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="titulo">Calculadora</h1>
+    <p class="descripcion">
+        Calculadora interactiva para realizar operaciones básicas 🔢🧮
+    </p>
+
+    <div class="calculadora">
+        <div class="visor">
+            <span class="resultado"></span>
+            <span class="input"></span>
+        </div>
+
+        <div class="botones">
+            <button>%</button>
+            <button>√</button>
+            <button>AC</button>
+            <button>CE</button>
+
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>/</button>
+
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>*</button>
+
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>-</button>
+
+            <button>0</button>
+            <button>.</button>
+            <button>=</button>
+            <button>+</button>
+        </div>
+    </div>
+
+
+    <script src="./js/calculadora.js"></script>
+    <script>
+        function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+        }
+  </script>
+</body>
+
+</html>

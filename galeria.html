@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería Bariloche</title>
+  <link rel="stylesheet" href="stylesProyectos.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html#sobremi">Sobre Mí</a></li>
+      <li><a href="index.html#proyectos">Proyectos</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+      <li><a href="/Linktree/index.html">Linktree</a></li>
+    </ul>
+  </nav>
+
+  <section class="galeria">
+    <h1 class="titulo">Proyecto Galería</h1>
+    <p class="descripcion">Fotos de mi viaje a Bariloche con amigas 🏔️✨</p>
+
+    <!-- Galería en grid -->
+    <div id="galeria" class="galeriaGrid"></div>
+
+    <!-- Slideshow oculto -->
+    <div id="slideshow" class="slideshow-container" style="display: none;">
+        <span class="cerrar" onclick="cerrarSlideshow()">×</span>
+
+        <img id="imagen-slideshow" src="" class="imagen-grande" alt="foto grande">
+
+        <a class="prev" onclick="cambiarImagen(-1)">❮</a>
+        <a class="next" onclick="cambiarImagen(1)">❯</a>
+    </div>
+  </section>
+
+  <script src="./js/galeria.js"></script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

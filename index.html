@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lucía Gareffi - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Convergence&display=swap" rel="stylesheet">
+
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "_s74EJjfgx_CMUNCQ",
+        });
+    })();
+  </script>
+
+</head>
+<body>
+
+  <!-- Video de fondo -->
+  <video autoplay muted loop id="myVideo">
+    <source src="imagenes/videoFondo.mp4" type="video/mp4">
+    Tu navegador no soporta videos HTML5.
+  </video>
+  <div class="video-overlay"></div>
+
+
+  <nav class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+      <li><a href="#inicio" onclick="closeMenu()">Inicio</a></li>
+      <li><a href="#sobremi" onclick="closeMenu()">Sobre Mí</a></li>
+      <li><a href="#proyectos" onclick="closeMenu()">Proyectos</a></li>
+      <li><a href="#contacto" onclick="closeMenu()">Contacto</a></li>
+      <li><a href="/Linktree/index.html">Linktree</a></li>
+    </ul>
+  </nav>
+
+  <!-- Inicio -->
+  <div id="inicio" class="content">
+    <h1>Lucía Gareffi</h1>
+    <p>Estudiante de Ingeniería Informática</p>
+    <a href="#proyectos" class="btn">Ver mis proyectos →</a>
+  </div>
+
+
+  <!-- Sobre Mi-->
+  <section id="sobremi" class="sobreMi">
+    <h1 class="titulo-seccion">Sobre Mí</h1>
+
+    <div class="contenido-sobre-mi">
+      <img
+        src="imagenes/Foto.jpeg"
+        alt="Foto de perfil"
+        class="fotoMia"
+      />
+
+      <div class="texto-sobre-mi">
+        <p>
+          Soy Lucía Gareffi, estudiante del último año de Ingeniería Informática en la Universidad Argentina 
+          de la Empresa (UADE).
+        </p>
+        <p>
+          Actualmente trabajo en Telefónica como desarrolladora front-end, donde aplico tecnologías como 
+          JavaScript, TypeScript, CSS y React para crear interfaces intuitivas y eficientes. 
+          Esta experiencia me ha permitido crecer profesionalmente mientras continúo con mis estudios.
+        </p>
+        <p>
+          Mi objetivo es seguir desarrollándome en el mundo de la tecnología, combinando los conocimientos 
+          académicos con la experiencia práctica para crear soluciones innovadoras y de calidad.
+        </p>
+
+        <section class="habilidades">
+          <h3>Habilidades</h3>
+          <div class="contenedor-burbujas">
+            <span class="burbuja">HTML</span>
+            <span class="burbuja">CSS</span>
+            <span class="burbuja">JavaScript</span>
+            <span class="burbuja">React</span>
+            <span class="burbuja">Node.js</span>
+            <span class="burbuja">Java</span>
+            <span class="burbuja">Figma</span>
+            <span class="burbuja">SQL</span>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos-->
+  <section id="proyectos" class="proyectos">
+    <h2 class="titulo-seccion">Mis Proyectos</h2>
+    <div class="contenedor-proyectos">
+
+      <a href="botonera.html" class="tarjeta-proyecto">
+        <h3 class="titulo-proyecto">Botonera</h3>
+        <img src="imagenes/botonera.png" alt="fotoBotonera" class="imgProyecto">
+        <p class="descripcion-proyecto">
+          Botonera interactiva sobre canciones de películas.
+        </p>
+      </a>
+
+      <a href="galeria.html" class="tarjeta-proyecto">
+        <h3 class="titulo-proyecto">Galería</h3>
+        <img src="imagenes/galeria.webp" alt="fotoBotonera" class="imgProyecto">
+        <p class="descripcion-proyecto">
+          Galería de imágenes tipo Slideshow.
+        </p>
+      </a>
+
+      <a href="calculadora.html" class="tarjeta-proyecto">
+        <h3 class="titulo-proyecto">Calculadora</h3>
+        <img src="imagenes/calculadora.webp" alt="fotoCalculadora" class="imgProyecto">
+        <p class="descripcion-proyecto">
+          Calculadora con operaciones básicas.
+        </p>
+      </a>
+
+    </div>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h1 class="titulo-seccion">Contacto</h1>
+    <div class="form">
+      <div class="formulario-contacto">
+        <form>
+          <div class="grupo-campo">
+            <label class="etiqueta-campo" for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="campo-entrada" required />
+          </div>
+          <div class="grupo-campo">
+            <label class="etiqueta-campo" for="email">Email</label>
+            <input type="email" id="email" name="email" class="campo-entrada" required />
+          </div>
+          <div class="grupo-campo">
+            <label class="etiqueta-campo" for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" class="campo-textarea" required></textarea>
+          </div>
+          <button type="button" class="boton-enviar" onclick="sendMail()">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="myModal">
+    <div class="modal-content">
+      <h2>¡Email enviado!</h2>
+      <p>Responderé lo antes posible.</p>
+      <button class="close-btn" id="closeModal">Cerrar</button>
+    </div>
+  </div>
+
+   <footer class="footer">
+    <p>&copy; 2025 Lucía Gareffi. Todos los derechos reservados.</p>
+    <div class="redesSociales">
+      <a href="https://www.linkedin.com/in/luc%C3%ADa-gareffi-sapia-b53231236/" class="footerLinks" target="_blank">LinkedIn</a>
+      <a href="https://github.com/lgareffi" class="footerLinks" target="_blank">Github</a>
+    </div>
+  </footer>
+
+  <script src="./js/script.js"></script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+
+    function closeMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.remove('active');
+    }
+  </script>
+
+
+</body>
+</html>
