@@ -1,14 +1,14 @@
 
 
 const imagenes = [
-  { url: "/imagenes/FotoBariloche1.jpg" },
-  { url: "/imagenes/FotoBariloche2.jpg" },
-  { url: "/imagenes/FotoBariloche3.jpg" },
-  { url: "/imagenes/FotoBariloche4.jpg" },
-  { url: "/imagenes/FotoBariloche5.jpg" },
-  { url: "/imagenes/FotoBariloche6.jpg" },
-  { url: "/imagenes/FotoBariloche7.jpg" },
-  { url: "/imagenes/FotoBariloche8.jpg" },
+  { url: "./imagenes/FotoBariloche1.jpg" },
+  { url: "./imagenes/FotoBariloche2.jpg" },
+  { url: "./imagenes/FotoBariloche3.jpg" },
+  { url: "./imagenes/FotoBariloche4.jpg" },
+  { url: "./imagenes/FotoBariloche5.jpg" },
+  { url: "./imagenes/FotoBariloche6.jpg" },
+  { url: "./imagenes/FotoBariloche7.jpg" },
+  { url: "./imagenes/FotoBariloche8.jpg" },
 ];
 
 let indiceActual = 0;
